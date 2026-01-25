@@ -1,2 +1,2 @@
-# thesis-ccs-modeling
+# thesis-cgs
 Undergraduate thesis at UC Berkeley
