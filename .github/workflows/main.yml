@@ -4,7 +4,7 @@ name: Reproducibility Check
 jobs:
   render:
     name: execute notebook
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       GDAL_HTTP_UNSAFESSL: YES
