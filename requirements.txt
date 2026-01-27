@@ -15,6 +15,7 @@ exactextract
 leafmap
 pystac-client
 odc-stac
+pyarrow>=14,<16
 
 
 
