@@ -5,10 +5,8 @@ seaborn
 matplotlib
 altair
 plotnine
-duckdb>=1.0,<2.0
-ibis-framework>=9,<12
-ibis-duckdb
-pyarrow>=14,<16
+duckdb==1.3.2
+ibis-framework[duckdb]
 nbval
 geopandas
 rioxarray
@@ -16,6 +14,7 @@ exactextract
 leafmap
 pystac-client
 odc-stac
+
 
 
 
