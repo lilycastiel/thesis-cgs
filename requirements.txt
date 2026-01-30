@@ -5,8 +5,9 @@ pandas
 seaborn
 matplotlib
 altair
-plotnine==duck4 #1.3.2b #1.3.2
-ibis-== 11.0.0framework #>=5.8.0,<6.0.0
+plotnine
+duckdb== 1.3.4 #1.3.2
+ibis-framework ==11.0.0 #>=5.8.0,<6.0.0
 nbval
 geopandas
 rioxarray
