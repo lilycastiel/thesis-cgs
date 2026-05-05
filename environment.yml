@@ -1,0 +1,26 @@
+name: thesis-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scipy
+  - scikit-learn
+  - geopandas
+  - shapely
+  - rioxarray
+  - xarray
+  - rasterio
+  - pyproj
+  - fiona
+  - pip
+  - pip:
+      - pystac-client
+      - odc-stac
+      - exactextract
+      - leafmap
+      - xgboost
+      - plotnine
