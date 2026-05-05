@@ -8,15 +8,27 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       GDAL_HTTP_UNSAFESSL: YES
+
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+
+      # 👇 replace setup-python with conda
+      - name: Setup Conda
+        uses: conda-incubator/setup-miniconda@v3
         with:
-            python-version: '3.11.9' 
-      - name: Install Dependencies
-        run: pip install -r requirements.txt
-      - name: test
+          python-version: 3.11
+          auto-update-conda: true
+          activate-environment: thesis-env
+          environment-file: environment.yml
+
+      # 👇 install pip-only deps (if needed)
+      - name: Install pip dependencies
+        shell: bash -l {0}
         run: |
-             pytest --nbval-lax *.ipynb
-#      - name: render
-#        run: myst build climate.md --pdf
+          pip install pytest nbval
+
+      # 👇 run your notebook tests
+      - name: test
+        shell: bash -l {0}
+        run: |
+          pytest --nbval-lax *.ipynb
